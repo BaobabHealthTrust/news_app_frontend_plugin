@@ -302,8 +302,6 @@ function ajaxNewsFeed() {
 
             ip_address = dataById.ip_address;
 
-            console.log(ip_address);
-
             delete dataById.ip_address;
 
             var keys = Object.keys(dataById);
@@ -451,8 +449,6 @@ function flipNews() {
             ____$("mainLink").setAttribute("category", data[pos].category.trim().toLowerCase());
 
             ____$("mainLink").onmousedown = function() {
-
-                console.log(this.getAttribute("category"));
 
                 window.parent.expandViewer(this.getAttribute("category"));
 
