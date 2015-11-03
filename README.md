@@ -25,7 +25,7 @@ How to Use
 					var url = require('url');
 					var data_connection = {
 						  "ip_address": "http://NEWS_APP_IP_ADDRESS:NEWS_APP_PORT",
-						  "news_path": "/api/news_feed",
+						  "news_path": "/api/news_feed?ip_address=",
 						  "logs_path": "/api/log",
 						  "username": "USERNAME",
 						  "password": "PASSWORD"
@@ -37,7 +37,8 @@ How to Use
 					router.route('/query')
 						  .get(function (req, res) {						      
 						      var Client = require('node-rest-client').Client;
-						      (new Client()).get(data_connection.ip_address + data_connection.news_path, function (data, response) {
+						      var ip_address = req.connection.remoteAddress;
+						      (new Client()).get(data_connection.ip_address + data_connection.news_path + ip_address, function (data, response) {
 						          var ip_address = req.connection.remoteAddress;
 						          var news = JSON.parse(data);
 						          news.ip_address = ip_address;

@@ -251,10 +251,10 @@ function createBanner() {
         "width: 200px; text-align: center; border: 2px outset rgba(238,238,238,1); border-radius: 8px; min-height: 210px;} " +
         ".sports {background-color: rgba(238,238,238,1); color: rgba(51,51,51,1); padding: 30px; min-height: 210px; " +
         "font-size: 32px; cursor: pointer; width: 200px; text-align: center; border: 2px outset rgba(238,238,238,1); border-radius: 8px;}</style>" +
-        "<table style='margin: auto; margin-top: 200px;' cellpadding='20'><tr><td><div class='news' onclick='window.parent.expandViewer(\"news\");'><img src='" + icoNews +
+        "<table style='margin: auto; margin-top: 100px;' cellpadding='20'><tr><td><div class='news' onclick='window.parent.expandViewer(\"news\");'><img src='" + icoNews +
         "' /><label id='lblNews'>Nkhani (" + (counts['news'] ? counts['news'].length : '?') + ")</label></div></td><td><div class='sports' onclick='window.parent.expandViewer(\"sports\");'><img src='" +
         icoSports + "' /><label id='lblSports'>Zamasewera (" + (counts['sports'] ? counts['sports'].length : '?') + ")</label></div></td></tr>" +
-        "</table><img src='" + icoLogo + "' style='position: absolute; bottom: 10px; left: 40%; width: 20%; z-index: 2015;' /></body>";
+        "</table><img src='" + icoLogo + "' style='position: absolute; bottom: 10px; left: 30%; width: 40%; z-index: 2015;' /></body>";
 
     iframe.src = 'data:text/html;charset=utf-8,' + encodeURI(html);
 
