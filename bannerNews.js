@@ -362,7 +362,7 @@ function ajaxNewsFeed() {
             dataByCategory = {};
 
             counts = {};
-            
+
             for (var i = 0; i < keys.length; i++) {
 
                 data.push(dataById[keys[i]]);
