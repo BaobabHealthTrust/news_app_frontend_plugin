@@ -466,6 +466,14 @@ function showArticle(id) {
 
     ajaxLogClick(id);
 
+    var index = counts[currentCategory].indexOf(id);
+
+    if (index > -1) {
+
+        counts[currentCategory].splice(index, 1);
+
+    }
+
     var doc = dataById[id];
 
     if (!doc)
